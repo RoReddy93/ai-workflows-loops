@@ -58,6 +58,11 @@ TOOL_SCHEMAS = [
         "name": "get_project", "description": "Look up a project by its ID (status, flags, linked PRD).",
         "parameters": {"type": "object", "properties": {
             "project_id": {"type": "string"}}, "required": ["project_id"]}}},
+     {"type": "function", "function": {
+        "name": "get_activity",
+        "description": "Pull recent engineering activity for a project (merged PRs, open issues, Sev-1s).",
+        "parameters": {"type": "object", "properties": {
+            "project_id": {"type": "string"}}, "required": ["project_id"]}}},
     {"type": "function", "function": {
         "name": "search_past_updates",
         "description": "Search previous status updates and decisions for tone and precedent.",
