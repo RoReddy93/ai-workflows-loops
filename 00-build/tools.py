@@ -56,16 +56,7 @@ def get_project(project_id: str) -> dict:
     # so the agent has to deliberately pull it (a teachable retrieval step).
     return {k: v for k, v in record.items() if k != "activity"}
 
-
-def get_activity(project_id: str) -> dict:
-    """Pull recent engineering activity (merged PRs, open issues, Sev-1s) for a project."""
-    project_id = str(project_id).strip()
-    projects = _load_json("projects.json")
-    record = projects.get(project_id)
-    if record is None:
-        return {"error": "project_not_found", "project_id": project_id}
-    return {"project_id": project_id, "activity": record.get("activity", [])}
-
+ 
 
 def search_past_updates(query: str = "") -> dict:
     """Search previous status updates and decisions for tone and precedent (the
