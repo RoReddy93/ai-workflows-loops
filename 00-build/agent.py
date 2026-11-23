@@ -59,11 +59,6 @@ TOOL_SCHEMAS = [
         "parameters": {"type": "object", "properties": {
             "project_id": {"type": "string"}}, "required": ["project_id"]}}},
     {"type": "function", "function": {
-        "name": "get_activity",
-        "description": "Pull recent engineering activity for a project (merged PRs, open issues, Sev-1s).",
-        "parameters": {"type": "object", "properties": {
-            "project_id": {"type": "string"}}, "required": ["project_id"]}}},
-    {"type": "function", "function": {
         "name": "search_past_updates",
         "description": "Search previous status updates and decisions for tone and precedent.",
         "parameters": {"type": "object", "properties": {
