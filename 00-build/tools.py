@@ -56,7 +56,7 @@ def get_project(project_id: str) -> dict:
     # so the agent has to deliberately pull it (a teachable retrieval step).
     return {k: v for k, v in record.items() if k != "activity"}
 
- def get_activity(project_id: str) -> dict:
+def get_activity(project_id: str) -> dict:
     """Pull recent engineering activity (merged PRs, open issues, Sev-1s) for a project."""
     project_id = str(project_id).strip()
     projects = _load_json("projects.json")
